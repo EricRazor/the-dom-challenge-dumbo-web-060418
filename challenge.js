@@ -54,11 +54,15 @@ pauseButton.addEventListener('click', function(e){
   }
 })
 
-let likes = 0
+//let likes = 0
 let likeObj = {}
 let likeButton = document.getElementById('<3')
 likeButton.addEventListener('click', function(e){
-  likeObj[counter.innerText] = ;
-
+  if (counter.innerText in likeObj === false){
+    likeObj[counter.innerText] = 1;
+  }
+  else if (counter.innerText in likeObj){
+    likeObj[counter.innerText] += 1;
+  }
   console.log(likeObj)
 })
