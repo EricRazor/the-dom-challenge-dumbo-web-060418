@@ -54,7 +54,7 @@ pauseButton.addEventListener('click', function(e){
   }
 })
 
-//let likes = 0
+// let likes = 0
 let likeObj = {}
 let likeButton = document.getElementById('<3')
 likeButton.addEventListener('click', function(e){
@@ -65,4 +65,14 @@ likeButton.addEventListener('click', function(e){
     likeObj[counter.innerText] += 1;
   }
   console.log(likeObj)
+})
+
+let comment = document.getElementById('comment-form')
+comment.addEventListener('submit', function(e){
+  e.preventDefault();
+  let inputValue = comment.children[0].value
+  let heading = document.querySelector('h3')
+  let p = document.createElement('p')
+  p.innerHTML = inputValue
+  heading.appendChild(p)
 })
